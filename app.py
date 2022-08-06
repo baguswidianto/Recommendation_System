@@ -1,3 +1,4 @@
+from wsgiref import headers
 import pandas as pd
 import os.path
 import numpy as np
@@ -32,7 +33,7 @@ def recommendation():
         df = recomendation_review(product_name)
         headers = list(enumerate(df.columns, 1))
         rows = []
-
+        print(headers)
         for _, row in df.iterrows():
             rows.append(list(enumerate(row, 1)))
 

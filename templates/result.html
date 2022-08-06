@@ -21,6 +21,26 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Hasil Rekomendasi Motor</h2>
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                      {% for header in headers %}
+                          <th>{{header[1]}}</th>
+                      {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in rows %}
+                           <tr>
+                             <td>{{row[0][1]}}</td>
+          <td>{{row[1][1]}}</td>
+          <td>{{row[2][1]}}</td>
+          <td>{{row[3][1]}}</td>
+          <td>{{row[4][1]}}</td>
+                           </tr>
+                       {% endfor %}
+                     </tbody>
+                  </table>
             </div>
          </header>
         <!-- Bootstrap core JS-->
